@@ -10,12 +10,14 @@
 					<time datatime="<?php the_time('Y-m-j') ?>">
 						<?php the_time('j-m-Y') ?>
 					</time>
+					<?php the_category(); ?>
 				</header>
 				<?php the_excerpt(); ?>
 				<footer>
 					<address> 
 					Por <?php the_author_posts_link(); ?>
 					</address>
+					<?php the_tags(); ?>
 				</footer>
 			</article>
 		<?php endwhile; ?>
