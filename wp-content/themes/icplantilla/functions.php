@@ -1,4 +1,7 @@
 <?php 
+
+require_once('wp-bootstrap-navwalker.php');
+
 function mis_menus(){
 	
 	register_nav_menus(

@@ -1,11 +1,14 @@
 <?php get_header(); ?>
-
+<div class="container"> 
 	<h2><?php single_cat_title(); ?></h2>
 
 <?php if (have_posts()): ?>
+	<div class="container">
 	<section>
 		<?php while (have_posts()): the_post(); ?>
 			<article>
+				<div class="jumbotron">
+      			<div class="container">
 				<header>
 					<h2>
 						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -14,6 +17,9 @@
 						<?php the_time('j-m-Y') ?>
 					</time>
 				</header>
+				</div>
+				</div>
+
 				<?php the_excerpt(); ?>
 				<footer>
 					<address> 
@@ -28,9 +34,12 @@
 			<span class="in-right"><?php previous_posts_link('Entradas Recientes >>'); ?></span>	
 		</div>
 	</section>
+	</div>
 <?php else: ?>
 	<p><?php _e('Aqui no hay nada'); ?></p>
 <?php endif; ?>
+
+</div>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

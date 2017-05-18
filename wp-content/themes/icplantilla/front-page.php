@@ -1,7 +1,7 @@
 <?php get_header(); ?>
-
+<div class="container"> 
 <?php if(have_posts()): the_post(); ?>
-	<section>
+	<section class="container">
 		<h2>
 			<?php the_title(); ?>
 		</h2>
@@ -10,5 +10,6 @@
 
 
 <?php endif; ?>
+</div>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

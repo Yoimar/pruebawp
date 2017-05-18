@@ -8,12 +8,38 @@
 		<?php wp_head(); ?>
 	</head>
 	<body>
-		<header>
-			<h1><?php bloginfo('name'); ?></h1>
-		</header>
-		<nav>
-			<ul class="main-nav">
-				<?php wp_nav_menu(array('theme_location' => 'navigation') ); ?>
-			</ul>
-		</nav>
+		<div class="jumbotron">
+      		<div class="container">
+				<header>
+					<h1><?php bloginfo('name'); ?></h1>
+				</header>
+			</div>
+		</div>
+		<div class="navbar navbar-default">
+  			<div class="container"> 
+    			<!-- Brand and toggle get grouped for better mobile display -->
+    			<div class="navbar-header">
+      				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navigation-menu">
+        				<span class="sr-only">Toggle navigation</span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+      				</button>
+    			</div><!-- navbar-header -->
+ 
+    			<!-- Collect the nav links, forms, and other content for toggling -->
+    			<nav class="collapse navbar-collapse navigation-menu" role="navigation">
+      				<?php wp_nav_menu( array(
+      				  'menu' => 'Menu 1',
+      				  'theme_location' => 'navigation',
+      				  'depth' => 2,
+      				  'container' => '',
+      				  'container_class' => '',
+      				  'menu_class' => 'nav navbar-nav',
+      				  'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
+      				  'walker' => new wp_bootstrap_navwalker())
+      				);?>
+    			</nav><!-- navigation -->
+  			</div><!-- container -->
+		</div><!-- navbar-default -->
 	
