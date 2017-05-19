@@ -12,15 +12,25 @@
 		</div>
 		<time datatime="<?php the_time('Y-m-j') ?>">
 						<?php the_time('j-m-Y') ?></time>
-	<?php the_content(); ?>
+	<div class="row">
+	<div class="col-md-10">
+		<?php the_content(); ?>
+	</div>
+	<div class="col-md-2">
+		<?php get_sidebar(); ?>
+	</div>
+	</div>
 	<address>
 		Por <?php the_author_posts_link(); ?>
 	</address>
 	</section>
+		<div class="container">
+			<?php comments_template(); ?>
+		</div>
 	</div>
 <?php else: ?>
 	<p><?php _e('Aqui no hay nada'); ?></p>
 <?php endif; ?>
 </div>
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>
