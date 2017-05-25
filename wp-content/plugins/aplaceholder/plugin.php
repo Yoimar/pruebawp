@@ -93,7 +93,7 @@ function aPlaceHolderAddButton(){
 	}
 }
 
-function aPlaceHolderButtonPlugin(){
+function aPlaceHolderButtonPlugin($plugin_array){
 	$plugin_array['aplaceholder'] = plugins_url('aplaceholder.js', __FILE__ );
 	return $plugin_array;
 }
@@ -106,11 +106,6 @@ function aPlaceHolderRegisterButton($buttons){
 add_action('admin_menu','aPlaceHolderPluginMenu');
 add_action('admin_init','aPlaceHolderRegisterSettings');
 add_action('init', 'aPlaceHolderAddButton');
-
-
 add_shortcode( 'aplaceholder', 'aPlaceHolder');
 ?>
 
-<div id="aplaceholder">
-	
-</div>
